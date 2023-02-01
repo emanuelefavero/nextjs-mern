@@ -1,0 +1,5 @@
+### GET /api/posts
+GET http://localhost:4000/api/posts
+
+### GET /api/posts/:id (from _id field in mongoDB)
+GET http://localhost:4000/api/posts/61a84a2e540cd9242879d80f
