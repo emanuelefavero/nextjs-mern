@@ -23,7 +23,11 @@ NODE_ENV='development'
 - The backend runs on [http://localhost:4000](http://localhost:4000)
 - The client runs on [http://localhost:3000](http://localhost:3000)
 
-> Note: For production you would need to build the client and run the server separately
+## Deployment
+
+- the client and server should be deployed separately
+- update `clientURL.js` file with the correct URL for the client
+- update `serverURL.ts` file with the correct URL for the server
 
 ## License
 
