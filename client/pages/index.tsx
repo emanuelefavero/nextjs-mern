@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { serverURL } from '@/utils/serverURL'
 
 export default function Home({ posts }: any) {
@@ -8,6 +10,9 @@ export default function Home({ posts }: any) {
         <div key={post._id}>
           <h2>{post.title}</h2>
           <p>{post.content}</p>
+          <Link className='link' href={`/posts/${post._id}`}>
+            Read more
+          </Link>
         </div>
       ))}
     </>

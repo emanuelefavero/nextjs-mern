@@ -5,7 +5,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
 
-const { clientURL } = require('./config')
+const { clientURL } = require('./clientURL')
 
 const app = express()
 
@@ -29,6 +29,10 @@ app.use(
     // credentials: true, // use this to enable cookies
   })
 )
+// Access-Control-Allow-Origin
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', clientURL)
+// })
 
 // Routes
 app.use('/api', routes)
