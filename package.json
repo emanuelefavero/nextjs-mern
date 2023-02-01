@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "startClient": "npm start --prefix client",
     "build": "npm install --prefix client && npm run build --prefix client",
-    "server": "nodemon server.js",
-    "client": "npm run dev --prefix client",
-    "startDev": "concurrently \"npm run server\" \"npm run client\""
+    "devServer": "nodemon server.js",
+    "devClient": "npm run dev --prefix client",
+    "startDev": "concurrently \"npm run devServer\" \"npm run devClient\""
   },
   "keywords": [],
   "author": "Emanuele Favero",
