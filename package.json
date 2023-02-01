@@ -9,7 +9,7 @@
     "build": "npm install --prefix client && npm run build --prefix client",
     "devServer": "nodemon server.js",
     "devClient": "npm run dev --prefix client",
-    "startDev": "concurrently \"npm run devServer\" \"npm run devClient\""
+    "dev": "concurrently \"npm run devServer\" \"npm run devClient\""
   },
   "keywords": [],
   "author": "Emanuele Favero",
