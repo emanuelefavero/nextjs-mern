@@ -1,3 +1,4 @@
+import { GetStaticPaths, GetStaticProps } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { serverURL } from '@/utils/serverURL'
@@ -20,7 +21,7 @@ export default function Post({ post }: any) {
 }
 
 // * Generate paths from /api/posts
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(`${serverURL}/api/posts`)
   const posts = await res.json()
 
@@ -32,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 // * GET a single post from the server /api/posts/:id
-export async function getStaticProps({ params }: any) {
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   const res = await fetch(`${serverURL}/api/posts/${params.id}`)
   const post = await res.json()
 

@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
 
 import { serverURL } from '@/utils/serverURL'
@@ -20,7 +21,7 @@ export default function Home({ posts }: any) {
 }
 
 // GET all posts from the server /api/posts
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(`${serverURL}/api/posts`)
   const posts = await res.json()
   return {
